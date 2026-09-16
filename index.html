@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Directorio · Mesa Voces Unidas Beni</title>
+  <meta name="description" content="Directorio institucional de la Mesa Departamental Voces Unidas frente a la Violencia Sexual contra Niñas, Niños y Adolescentes – Beni, Bolivia.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ===== Cabecera ===== -->
+  <header class="topbar">
+    <div class="container topbar__inner">
+      <a href="#inicio" class="brand">
+        <span class="brand__name">Voces Unidas<span class="brand__dot">.</span></span>
+        <span class="brand__sub">Directorio institucional · Beni</span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#directorio">Directorio</a>
+        <a href="#la-mesa">La Mesa</a>
+        <a href="#articulacion">Articulación</a>
+        <a href="#lineas">Líneas prioritarias</a>
+        <a href="#fuentes">Fuentes</a>
+      </nav>
+      <a href="#directorio" class="btn btn--primary btn--nav">Ver directorio</a>
+    </div>
+  </header>
+
+  <!-- ===== Portada ===== -->
+  <section id="inicio" class="hero">
+    <div class="container hero__inner">
+      <p class="hero__eyebrow" id="hero-gestion"></p>
+      <h1 class="hero__title" id="hero-nombre"></h1>
+      <p class="hero__place" id="hero-lugar"></p>
+      <p class="hero__lead" id="hero-presentacion"></p>
+
+      <div class="hero__roles">
+        <div class="role-card">
+          <span class="role-card__label">Presidencia</span>
+          <strong id="hero-presidencia"></strong>
+        </div>
+        <div class="role-card">
+          <span class="role-card__label">Secretaría Técnica</span>
+          <strong id="hero-secretaria"></strong>
+        </div>
+      </div>
+
+      <div class="hero__stats" id="hero-stats"></div>
+    </div>
+  </section>
+
+  <!-- ===== Directorio ===== -->
+  <section id="directorio" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Directorio de instituciones y actores</h2>
+        <p>Consulte la naturaleza, servicios, rol en la Mesa, misión, visión y datos de contacto de cada institución.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          <input type="search" id="buscar" placeholder="Buscar por nombre, sigla, servicio, dirección…" autocomplete="off">
+        </label>
+        <div class="chips" id="filtros" role="group" aria-label="Filtrar por categoría"></div>
+        <p class="toolbar__count" id="contador"></p>
+      </div>
+
+      <div class="grid" id="grid"></div>
+      <p class="empty" id="vacio" hidden>No se encontraron instituciones con ese criterio.</p>
+    </div>
+  </section>
+
+  <!-- ===== La Mesa ===== -->
+  <section id="la-mesa" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>Sobre la Mesa Departamental</h2>
+      </div>
+      <div class="two-col">
+        <article class="card-text">
+          <h3>Antecedentes</h3>
+          <p id="mesa-antecedentes"></p>
+        </article>
+        <article class="card-text">
+          <h3>Organización actual en el Beni</h3>
+          <ul class="org-list">
+            <li><span class="org-list__k">Presidencia</span><span id="mesa-presidencia"></span></li>
+            <li><span class="org-list__k">Secretaría Técnica</span><span id="mesa-secretaria"></span></li>
+            <li><span class="org-list__k">Composición mínima (guía nacional)</span><span>Policía/FELCV · Ministerio Público · Tribunal Departamental de Justicia · SEDES · SEDEGES · Instancia municipal de desarrollo social · DNA · SLIM · Sociedad civil organizada</span></li>
+            <li><span class="org-list__k">Actores estratégicos adicionales</span><span>Cooperación internacional (UNICEF, UNFPA), CEPAT, organizaciones de la sociedad civil y redes comunitarias.</span></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Articulación ===== -->
+  <section id="articulacion" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Articulación interinstitucional</h2>
+      </div>
+      <div class="prose" id="articulacion-texto"></div>
+    </div>
+  </section>
+
+  <!-- ===== Líneas prioritarias ===== -->
+  <section id="lineas" class="section section--alt">
+    <div class="container">
+      <div class="section__head">
+        <h2>Líneas prioritarias de trabajo</h2>
+      </div>
+      <ol class="lineas" id="lineas-lista"></ol>
+    </div>
+  </section>
+
+  <!-- ===== Fuentes ===== -->
+  <section id="fuentes" class="section">
+    <div class="container">
+      <div class="section__head">
+        <h2>Fuentes institucionales de referencia</h2>
+      </div>
+      <ul class="fuentes" id="fuentes-lista"></ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Mesa Departamental “Voces Unidas frente a la Violencia Sexual contra Niñas, Niños y Adolescentes” · Beni, Bolivia</p>
+      <p class="footer__note">Herramienta de consulta y referencia para reconocer responsabilidades institucionales y facilitar la coordinación. Datos de contacto validados en la gestión 2026.</p>
+    </div>
+  </footer>
+
+  <!-- ===== Detalle (modal) ===== -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__backdrop" data-close></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" data-close aria-label="Cerrar">&times;</button>
+      <div class="modal__content" id="modal-content"></div>
+    </div>
+  </div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
