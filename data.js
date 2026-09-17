@@ -147,13 +147,13 @@ const INSTITUCIONES = [
     vision:
       "Interponer acciones, representar y presentar querellas ante el Ministerio Público u otras instancias competentes cuando se conozcan delitos o vulneraciones cuyos afectados sean menores de edad, asegurando procesos que velen por el bienestar del menor y eviten toda forma de revictimización institucional.",
     caracteristicas: ["Servicio especializado", "Protección de NNA", "Acción legal", "Interés superior del niño", "Sin revictimización"],
-    contacto: { direccion: "Calle Pedro de la Rocha, Trinidad, Bolivia (537W+62P)", telefonos: ["4621322", "4621361", "4621477"], whatsapp: "", correo: "contacto@trinidad.gob.bo", web: "https://gamtenlinea.trinidad.gob.bo/Areas/12/detallesarea", horario: "" },
+    contacto: { direccion: "Av. Beni (lado del colegio 25 de Diciembre), Trinidad, Bolivia", telefonos: ["4621322", "4621361", "4621477"], whatsapp: "", correo: "contacto@trinidad.gob.bo", web: "https://gamtenlinea.trinidad.gob.bo/Areas/12/detallesarea", horario: "" },
     redes: {
       facebook: "https://www.facebook.com/GAMTDD",
       x: "https://x.com/GobMunTrinidad",
       tiktok: "https://www.tiktok.com/@gamtrinidad"
     },
-    fuenteContacto: "Datos tomados de la ficha de la unidad en el portal GAMT en Línea (gamtenlinea.trinidad.gob.bo). Teléfonos, correo y redes corresponden al Gobierno Autónomo Municipal de Trinidad."
+    fuenteContacto: "Teléfonos, correo y redes corresponden a la central del Gobierno Autónomo Municipal de Trinidad (portal GAMT en Línea). Dirección validada por el equipo de la Mesa."
   },
   {
     id: "sedes",
@@ -238,9 +238,9 @@ const INSTITUCIONES = [
     vision:
       "Ser un organismo técnico, científico y altamente especializado; consolidar una institución transparente con cero tolerancia a la corrupción; y garantizar una vida libre de violencia preservando la tranquilidad de las familias en el Beni y todo el país.",
     caracteristicas: ["Policía especializada", "Denuncia e investigación", "Auxilio inmediato", "Cero tolerancia"],
-    contacto: { direccion: "Zona San Juan, calle Joaquín de la Sierra S/N, Trinidad, Bolivia", telefonos: ["3-4624875", "800140348 (línea gratuita)"], whatsapp: "72042709", correo: "", web: "", horario: "Servicio de emergencia y denuncias las 24 horas" },
+    contacto: { direccion: "Zona 13 de Abril (frente al mercado 13 de Abril), Trinidad, Bolivia", telefonos: ["3-4624875", "800140348 (línea gratuita)"], whatsapp: "72042709", correo: "", web: "", horario: "Servicio de emergencia y denuncias las 24 horas" },
     redes: { facebook: "https://www.facebook.com/FelcvBolivia/" },
-    fuenteContacto: "Dirección y número de referencia 72042709 del directorio del Observatorio del Órgano Judicial (obs.organojudicial.gob.bo); teléfono fijo 3-4624875 del directorio nacional de la FELCV. Línea gratuita nacional 800-140348."
+    fuenteContacto: "Dirección validada por el equipo de la Mesa. Número de referencia 72042709 del directorio del Observatorio del Órgano Judicial (obs.organojudicial.gob.bo); teléfono fijo 3-4624875 del directorio nacional de la FELCV. Línea gratuita nacional 800-140348."
   },
   {
     id: "fiscalia",
@@ -478,13 +478,13 @@ const INSTITUCIONES = [
     vision:
       "Ser la organización referente y líder en el Beni en la atención psicosocial de mujeres en situación de violencia de género, destacada por su calidad técnica, ética profesional y enfoque de derechos humanos, construyendo una sociedad beniana donde las mujeres vivan libres de toda forma de violencia.",
     caracteristicas: ["Sociedad civil", "Sin fines de lucro", "Atención psicosocial", "Reparación psicológica", "Capacitación"],
-    contacto: { direccion: "Av. 18 de Noviembre N° 375, entre Sucre y Vaca Díez, Trinidad", telefonos: ["72125764"], whatsapp: "", correo: "psfbeni2009@gmail.com", web: "https://www.psfbeni.org", horario: "" },
+    contacto: { direccion: "Calle Carmelo López, Trinidad, Bolivia", telefonos: ["72125764"], whatsapp: "", correo: "psfbeni2009@gmail.com", web: "https://www.psfbeni.org", horario: "" },
     redes: {
       facebook: "https://www.facebook.com/share/1AYkv4vgJu/",
       instagram: "https://www.instagram.com/psf_beni20",
       tiktok: "https://www.tiktok.com/@psfbeni20"
     },
-    fuenteContacto: "Todos los datos provienen del sitio oficial psfbeni.org. El enlace de Facebook es un enlace compartido (share)."
+    fuenteContacto: "Teléfono, correo y redes provienen del sitio oficial psfbeni.org; dirección validada por el equipo de la Mesa. El enlace de Facebook es un enlace compartido (share)."
   },
   {
     id: "vida-libre",
@@ -511,7 +511,7 @@ const INSTITUCIONES = [
     vision:
       "Ser un referente organizado y reconocido de actoras comunitarias capaces de incidir en la reducción de la violencia de género en el Beni, logrando una coordinación sólida y formal con el Estado y los gobiernos locales para garantizar respuestas rápidas y justas a las víctimas.",
     caracteristicas: ["Red comunitaria", "Promotoras", "Puntos violetas", "Prevención de base", "Derivación"],
-    contacto: { direccion: "Vía Fundación Psicólogos Sin Fronteras Beni: Av. 18 de Noviembre N° 375, Trinidad", telefonos: ["72125764"], whatsapp: "", correo: "psfbeni2009@gmail.com", web: "https://www.psicologossinfronteras.org/proyectos/vida-libre-proteccion-integral-contra-la-violencia-de-genero-en-la-ciudad-de-trinidad-beni-bolivia/", horario: "" },
+    contacto: { direccion: "Vía Fundación Psicólogos Sin Fronteras Beni: calle Carmelo López, Trinidad", telefonos: ["72125764"], whatsapp: "", correo: "psfbeni2009@gmail.com", web: "https://www.psicologossinfronteras.org/proyectos/vida-libre-proteccion-integral-contra-la-violencia-de-genero-en-la-ciudad-de-trinidad-beni-bolivia/", horario: "" },
     redes: { facebook: "https://www.facebook.com/p/Red-Nacional-de-Promotoras-Comunitarias-Bolivia-100086810584362/" },
     fuenteContacto: "La Red 'Vida Libre' nace del proyecto homónimo ejecutado por Psicólogos Sin Fronteras Beni (socio local), por lo que se consigna el contacto de esa fundación. La página de Facebook es la de la Red Nacional de Promotoras Comunitarias; no se encontró cuenta propia de la red en Trinidad."
   }
