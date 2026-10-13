@@ -7,17 +7,27 @@
   <meta name="description" content="Directorio institucional de la Mesa Departamental Voces Unidas frente a la Violencia Sexual contra Niñas, Niños y Adolescentes – Beni, Bolivia.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <div class="utility-bar" aria-label="Información institucional">
+    <div class="container utility-bar__inner">
+      <span>Mesa Departamental frente a la Violencia Sexual contra NNA</span>
+      <span>Beni · Bolivia</span>
+    </div>
+  </div>
 
   <!-- ===== Cabecera ===== -->
   <header class="topbar">
     <div class="container topbar__inner">
       <a href="#inicio" class="brand">
-        <span class="brand__name">Voces Unidas<span class="brand__dot">.</span></span>
-        <span class="brand__sub">Directorio institucional · Beni</span>
+        <span class="brand__mark" aria-hidden="true"><span>VU</span></span>
+        <span class="brand__copy">
+          <span class="brand__name">Voces Unidas</span>
+          <span class="brand__sub">Directorio institucional · Beni</span>
+        </span>
       </a>
       <nav class="nav" aria-label="Navegación principal">
         <a href="#directorio">Directorio</a>
@@ -33,23 +43,38 @@
   <!-- ===== Portada ===== -->
   <section id="inicio" class="hero">
     <div class="container hero__inner">
-      <p class="hero__eyebrow" id="hero-gestion"></p>
-      <h1 class="hero__title" id="hero-nombre"></h1>
-      <p class="hero__place" id="hero-lugar"></p>
-      <p class="hero__lead" id="hero-presentacion"></p>
+      <div class="hero__content">
+        <p class="hero__eyebrow" id="hero-gestion"></p>
+        <h1 class="hero__title" id="hero-nombre"></h1>
+        <p class="hero__place" id="hero-lugar"></p>
+        <p class="hero__lead" id="hero-presentacion"></p>
 
-      <div class="hero__roles">
-        <div class="role-card">
-          <span class="role-card__label">Presidencia</span>
-          <strong id="hero-presidencia"></strong>
+        <div class="hero__actions">
+          <a href="#directorio" class="btn btn--primary">Explorar el directorio <span aria-hidden="true">→</span></a>
+          <a href="#la-mesa" class="btn btn--outline">Conocer la Mesa</a>
         </div>
-        <div class="role-card">
-          <span class="role-card__label">Secretaría Técnica</span>
-          <strong id="hero-secretaria"></strong>
+
+        <div class="hero__roles">
+          <div class="role-card">
+            <span class="role-card__label">Presidencia</span>
+            <strong id="hero-presidencia"></strong>
+          </div>
+          <div class="role-card">
+            <span class="role-card__label">Secretaría Técnica</span>
+            <strong id="hero-secretaria"></strong>
+          </div>
         </div>
+
+        <div class="hero__stats" id="hero-stats"></div>
       </div>
 
-      <div class="hero__stats" id="hero-stats"></div>
+      <figure class="hero__visual">
+        <img src="img/vida-libre.jpg" alt="Integrantes de la Red de Promotoras Comunitarias Vida Libre">
+        <figcaption>
+          <span class="hero__visual-kicker">Trabajo articulado</span>
+          <strong>Instituciones y comunidad unidas por entornos protectores.</strong>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
@@ -130,9 +155,12 @@
   </section>
 
   <footer class="footer">
-    <div class="container">
-      <p>Mesa Departamental “Voces Unidas frente a la Violencia Sexual contra Niñas, Niños y Adolescentes” · Beni, Bolivia</p>
-      <p class="footer__note">Herramienta de consulta y referencia para reconocer responsabilidades institucionales y facilitar la coordinación. Datos de contacto validados en la gestión 2026.</p>
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <span class="brand__mark brand__mark--footer" aria-hidden="true"><span>VU</span></span>
+        <p>Mesa Departamental “Voces Unidas frente a la Violencia Sexual contra Niñas, Niños y Adolescentes”</p>
+      </div>
+      <p class="footer__note">Herramienta de consulta para reconocer responsabilidades institucionales y facilitar la coordinación. Datos de contacto validados en la gestión 2026 · Beni, Bolivia.</p>
     </div>
   </footer>
 
