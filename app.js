@@ -1,5 +1,5 @@
 /* =========================================================
-   Directorio Mesa Voces Unidas · Beni — lógica de la página
+   Directorio Mesa Voces Unidas · Pando — lógica de la página
    Depende de data.js (MESA, CATEGORIAS, INSTITUCIONES)
    ========================================================= */
 (function () {
@@ -8,6 +8,7 @@
   const $ = (sel, ctx = document) => ctx.querySelector(sel);
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const PENDIENTE = '<span class="pending">No disponible</span>';
+  const parrafo = (t) => `<p>${t ? esc(t) : PENDIENTE}</p>`;
 
   /* ---------- Iconos SVG (inline, sin dependencias) ---------- */
   const ICON = {
@@ -73,7 +74,7 @@
   let texto = "";
 
   function renderFiltros() {
-    const chips = [`<button class="chip is-active" data-cat="todas" style="--chip-color:#0f4c81">Todas</button>`]
+    const chips = [`<button class="chip is-active" data-cat="todas" style="--chip-color:#14502d">Todas</button>`]
       .concat(Object.entries(CATEGORIAS).map(([k, c]) =>
         `<button class="chip" data-cat="${k}" style="--chip-color:${c.color}">${esc(c.nombre)}</button>`));
     const cont = $("#filtros");
@@ -131,19 +132,17 @@
   function detalleHTML(inst) {
     const cat = CATEGORIAS[inst.categoria];
     const c = inst.contacto;
+    const correos = [].concat(c.correo || []);
     const li = (icon, html) => `<li>${icon}<div>${html}</div></li>`;
 
     const contacto = [
-      li(ICON.pin, c.direccion ? `<a href="${mapsUrl(c.direccion)}" target="_blank" rel="noopener">${esc(c.direccion)}</a>` : PENDIENTE),
+      li(ICON.pin, c.direccion ? `<a href="${esc(c.mapa || mapsUrl(c.direccion))}" target="_blank" rel="noopener">${esc(c.direccion)}</a>` : PENDIENTE),
       li(ICON.phone, c.telefonos.length ? c.telefonos.map((t) => `<a href="${telHref(t)}">${esc(t)}</a>`).join(" · ") : PENDIENTE),
       li(ICON.whatsapp, c.whatsapp ? `<a href="${waHref(c.whatsapp)}" target="_blank" rel="noopener">${esc(c.whatsapp)}</a>` : PENDIENTE),
-      li(ICON.mail, c.correo ? `<a href="mailto:${esc(c.correo)}">${esc(c.correo)}</a>` : PENDIENTE),
+      li(ICON.mail, correos.length ? correos.map((m) => `<a href="mailto:${esc(m)}">${esc(m)}</a>`).join(" · ") : PENDIENTE),
       li(ICON.globe, c.web ? `<a href="${esc(c.web)}" target="_blank" rel="noopener">${esc(c.web.replace(/^https?:\/\//, ""))}</a>` : PENDIENTE),
       c.horario ? li(ICON.clock, esc(c.horario)) : ""
     ].join("");
-    const fuente = inst.fuenteContacto
-      ? `<p class="source"><strong>Origen de los datos:</strong> ${esc(inst.fuenteContacto)}</p>`
-      : "";
 
     const redes = Object.entries(inst.redes || {}).filter(([, u]) => u);
     const redesHTML = redes.length
@@ -160,17 +159,17 @@
         </div>
         <div class="detail__grid">
           <div class="detail__main">
-            <div class="block"><h4>Naturaleza institucional</h4><p>${esc(inst.descripcion)}</p></div>
-            <div class="block"><h4>Servicios y competencias (protección de NNA)</h4><ul>${inst.servicios.map((s) => `<li>${esc(s)}</li>`).join("")}</ul></div>
-            <div class="block"><h4>Aporte y rol dentro de la Mesa</h4><p>${esc(inst.aporteMesa)}</p></div>
+            <div class="block"><h4>Naturaleza institucional</h4>${parrafo(inst.descripcion)}</div>
+            <div class="block"><h4>Servicios y competencias (protección de NNA)</h4>${inst.servicios.length ? `<ul>${inst.servicios.map((s) => `<li>${esc(s)}</li>`).join("")}</ul>` : parrafo("")}</div>
+            <div class="block"><h4>Aporte y rol dentro de la Mesa</h4>${parrafo(inst.aporteMesa)}</div>
             <div class="mv">
-              <div class="mv__item block"><h4>Misión</h4><p>${esc(inst.mision)}</p></div>
-              <div class="mv__item block"><h4>Visión</h4><p>${esc(inst.vision)}</p></div>
+              <div class="mv__item block"><h4>Misión</h4>${parrafo(inst.mision)}</div>
+              <div class="mv__item block"><h4>Visión</h4>${parrafo(inst.vision)}</div>
             </div>
             ${inst.notaValidacion ? `<div class="note">${esc(inst.notaValidacion)}</div>` : ""}
           </div>
           <aside class="detail__side">
-            <div class="side-box block"><h4>Datos de contacto</h4><ul class="contact">${contacto}</ul>${fuente}</div>
+            <div class="side-box block"><h4>Datos de contacto</h4><ul class="contact">${contacto}</ul></div>
             <div class="side-box block"><h4>Redes sociales</h4>${redesHTML}</div>
             <div class="side-box block">
               <h4>Ficha</h4>
